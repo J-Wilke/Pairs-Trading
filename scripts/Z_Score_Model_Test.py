@@ -69,8 +69,8 @@ def run_backtest():
     print("Available columns in prepared_data:", prepared_data.columns.tolist())
     
     # Generate trading signals
-    entry_threshold = 2.0
-    exit_threshold = 0.5
+    entry_threshold = 1.0
+    exit_threshold = 0.25
     prepared_data['signal'] = generate_signals(prepared_data, entry_threshold, exit_threshold)
     
     # Prepare backtesting data

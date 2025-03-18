@@ -21,8 +21,8 @@ end_date = datetime.today().strftime('%Y-%m-%d')
 prepared_data = prepare_data(ticker_a, ticker_b, start_date, end_date)
 
 # Set thresholds for trading signals (in units of standard deviations)
-entry_threshold = 2.0   # Enter trade when z_score is above +2 or below -2
-exit_threshold = 0.5    # Exit trade when the absolute z_score falls below 0.5
+entry_threshold = 1.0   # Enter trade when z_score is above +2 or below -2
+exit_threshold = 0.25    # Exit trade when the absolute z_score falls below 0.5
 
 # Function: Generate trading signals based on z_score thresholds.
 def generate_signals(prepared_data, entry_thresh, exit_thresh):
